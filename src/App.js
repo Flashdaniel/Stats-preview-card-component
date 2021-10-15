@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Container from "@mui/material/Container";
+import CssBaseline from "@mui/material/CssBaseline";
+import StatsPreviewCard from "./components/StatsPreviewCard";
+import { useTheme } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 
 function App() {
+  const theme = useTheme();
+  const matchesMD = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {matchesMD ? (
+        <Container maxWidth="xs" disableGutters sx={mainContainer}>
+          <CssBaseline />
+          <StatsPreviewCard />
+        </Container>
+      ) : (
+        <Container maxWidth="lg" disableGutters sx={mainContainer}>
+          <CssBaseline />
+          <StatsPreviewCard />
+        </Container>
+      )}
+    </>
   );
 }
+
+const mainContainer = {
+  fontSize: "15px",
+  fontFamily: "inter, sans-serif",
+  p: "5rem 1.5rem",
+};
 
 export default App;
