@@ -125,13 +125,13 @@ const card = {
   backgroundColor: "hsl(244, 38%, 16%)",
   borderRadius: 3,
   dlsplay: { xs: "block", md: "flex" },
-  flexDirection: { xs: "column", md: "row" },
+  flexDirection: { xs: "column", md: "row-reverse" },
   alignItems: "center",
   justifyContent: "center",
 };
 
 const cardHeroImage = {
-  order: { xs: 1, md: 2 },
+  flexBasis: " 50%",
   background: {
     xs: `linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url(${heroImage})`,
     md: `linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url(${heroImage1})`,
@@ -143,8 +143,9 @@ const cardHeroImage = {
 };
 
 const cardBody = {
-  order: { xs: 2, md: 1 },
-  p: "4rem 2.5rem",
+  flexBasis: "50%",
+  p: "4rem 3.5rem",
+  pr: "6rem",
 };
 
 export default StatsPreviewCard;
