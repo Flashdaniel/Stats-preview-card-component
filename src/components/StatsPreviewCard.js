@@ -131,7 +131,6 @@ const card = {
 };
 
 const cardHeroImage = {
-  flexBasis: " 50%",
   background: {
     xs: `linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url(${heroImage})`,
     md: `linear-gradient(hsla(277, 64%, 61%, 0.5), hsla(277, 64%, 61%, 0.5)), url(${heroImage1})`,
